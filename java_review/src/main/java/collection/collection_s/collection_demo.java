@@ -14,19 +14,21 @@ public class collection_demo {
         Collection collection = new ArrayList();
         System.out.println(collection);//[]
 
-
         //1添加元素
-        collection.add("1");
-        collection.add("1");
+        collection.add("2");
+        collection.add("2");
         collection.add("1");
         collection.add("2");
+        collection.add(1);
         System.out.println(collection);//[1, 1, 2]
+        System.out.println(collection);
 
 
         //2删除元素
+        //有1和"1"的区别，remove的是对象，而不是索引
         collection.remove("1");
         System.out.println(collection);//[1, 2]
-        collection.clear();//[]
+//        collection.clear();//[]
         System.out.println(collection);
 
 
@@ -39,9 +41,15 @@ public class collection_demo {
         //迭代器
         Iterator iterator = collection.iterator();
         while (iterator.hasNext()){
-            String o = (String) iterator.next();
-            System.out.println(o);
+            if(iterator.next().equals("2")){
+//                collection.remove(iterator.next());
+                iterator.remove();
+
+            }
         }
+        Object a = 1;
+        System.out.println(a.getClass().getTypeName());
+        System.out.println(collection);
 
         //4判断
         System.out.println(collection.contains("1"));//true

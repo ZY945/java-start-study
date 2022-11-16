@@ -1,6 +1,8 @@
 import com.sun.xml.internal.fastinfoset.algorithm.IntegerEncodingAlgorithm;
 import org.junit.Test;
 
+import java.lang.reflect.Field;
+import java.lang.reflect.Method;
 import java.util.*;
 
 /**
@@ -81,5 +83,52 @@ public class mytest {
         list.add(1);
         System.out.println(list);
 
+    }
+
+
+    @Test
+    public void listStr(){
+        List<Integer> list = new ArrayList<>();
+        list.add(1);
+        Class class1=list.getClass();
+        try {
+            Method method= class1.getMethod("add",Object.class);
+            //通过反射机制操作list对象
+            method.invoke(list,"sss");
+            System.out.println(list);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+
+    @Test
+    public void listadd() throws IllegalAccessException, NoSuchFieldException {
+        ArrayList list = new ArrayList();
+        mytest mytest = new mytest();
+        System.out.println(mytest.getArrayListCapacity(list));
+        System.out.println(list.size());
+        for (int i = 0; i < 20; i++) {
+            list.add(1);
+        }
+        System.out.println(mytest.getArrayListCapacity(list));
+        System.out.println(list.size());
+    }
+
+
+    public  int getArrayListCapacity(ArrayList<?> arrayList) {
+        Class<ArrayList> arrayListClass = ArrayList.class;
+        try {
+            //获取 elementData 字段
+            Field field = arrayListClass.getDeclaredField("elementData");
+            //开始访问权限
+            field.setAccessible(true);
+            //把示例传入get，获取实例字段elementData的值
+            Object[] objects = (Object[])field.get(arrayList);
+            //返回当前ArrayList实例的容量值
+            return objects.length;
+        } catch (Exception e) {
+            e.printStackTrace();
+            return -1;
+        }
     }
 }
