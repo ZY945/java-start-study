@@ -1,4 +1,3 @@
-import com.sun.xml.internal.fastinfoset.algorithm.IntegerEncodingAlgorithm;
 import org.junit.Test;
 
 import java.lang.reflect.Field;
@@ -115,7 +114,8 @@ public class mytest {
     }
 
 
-    public  int getArrayListCapacity(ArrayList<?> arrayList) {
+
+    public int getArrayListCapacity(ArrayList<?> arrayList) {
         Class<ArrayList> arrayListClass = ArrayList.class;
         try {
             //获取 elementData 字段
@@ -130,5 +130,13 @@ public class mytest {
             e.printStackTrace();
             return -1;
         }
+    }
+
+
+    @Test
+    public void fill(){
+        String[] array = new String[10];
+        Arrays.fill(array,".");
+        System.out.println();
     }
 }

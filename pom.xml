@@ -10,6 +10,8 @@
     <version>1.0-SNAPSHOT</version>
     <modules>
         <module>jdk8-start-study</module>
+        <module>java_review</module>
+
     </modules>
 
     <properties>
