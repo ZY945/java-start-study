@@ -14,7 +14,7 @@ public class SystemIconDemo extends JFrame {
         setSize(300, 300); // 设置窗口大小
 
         FileSystemView fsv = FileSystemView.getFileSystemView();
-        Icon icon = fsv.getSystemIcon(new File("F:\\study\\java_study\\Java-start-study\\jdk17-start-study\\demo.png"), 64, 64);
+        Icon icon = fsv.getSystemIcon(new File("F:\\study\\java_study\\Java-start-study\\jdk17-start-study\\demo.png"));
         JLabel jLabel = new JLabel(icon);
         add(jLabel); // 将标签添加到窗口中
     }
