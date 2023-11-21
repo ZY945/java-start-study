@@ -72,7 +72,7 @@ public class ATMSystem {
             while(st){
                 showATMByUser();
                 int i = scanner.nextInt();
-                switch (i){
+                switch(i){
                     case 0:
                         st = false;
                         break;

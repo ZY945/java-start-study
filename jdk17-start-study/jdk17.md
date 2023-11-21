@@ -1,0 +1,4 @@
+- JEP 406：switch的模式匹配（预览）(JDK-8213076)
+  - https://openjdk.org/jeps/406
+- JEP 409：密封类(JDK-8260514)
+  - https://openjdk.org/jeps/409

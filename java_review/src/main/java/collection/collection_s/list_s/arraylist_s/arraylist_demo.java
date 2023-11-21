@@ -1,9 +1,6 @@
 package collection.collection_s.list_s.arraylist_s;
 
-import java.util.ArrayList;
-import java.util.Iterator;
-import java.util.List;
-import java.util.ListIterator;
+import java.util.*;
 
 /**
  * @author 伍六七
@@ -14,7 +11,7 @@ public class arraylist_demo {
         //0新建[]
         ArrayList arrayList  = new ArrayList<>();
         System.out.println(arrayList);//[]
-
+        LinkedList<Object> objects = new LinkedList<>();
 
         //1添加
         arrayList.add(1);

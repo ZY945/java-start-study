@@ -1,4 +1,5 @@
 import org.junit.Test;
+import study.ATM.User;
 
 import java.lang.reflect.Field;
 import java.lang.reflect.Method;
@@ -138,5 +139,27 @@ public class mytest {
         String[] array = new String[10];
         Arrays.fill(array,".");
         System.out.println();
+    }
+
+    @Test
+    public void classTest() throws ClassNotFoundException, InstantiationException, IllegalAccessException, NoSuchFieldException {
+        //获得class对象
+        //1.
+        User user = new User("1","张三","123",1,1,1);
+        Class<? extends User> userClass = user.getClass();
+        System.out.println(userClass);
+        User user1 = userClass.newInstance();//反射创建对象
+        Field userName = userClass.getDeclaredField("userName");
+        userName.setAccessible(true);
+        System.out.println(userName.get(user));
+
+
+        //2. .class
+        Class<User> userClass1 = User.class;
+        System.out.println(userClass1);
+
+        //3. 类的完全限定名
+        Class<?> aClass = Class.forName("study.ATM.User");
+        System.out.println(aClass);
     }
 }
