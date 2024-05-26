@@ -1,4 +1,4 @@
-package study.movie;
+package study.studydemo.movie;
 import java.util.ArrayList;
 
 /**

@@ -1,4 +1,4 @@
-package study.ATM;
+package study.studydemo.ATM;
 
 import java.util.ArrayList;
 import java.util.Scanner;

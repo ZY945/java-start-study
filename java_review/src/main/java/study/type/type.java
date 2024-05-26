@@ -1,4 +1,4 @@
-package type;
+package study.type;
 
 import java.util.Random;
 import java.util.Scanner;

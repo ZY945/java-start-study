@@ -1,4 +1,4 @@
-package study.JDBC;
+package study.studydemo.JDBC;
 
 import java.sql.*;
 

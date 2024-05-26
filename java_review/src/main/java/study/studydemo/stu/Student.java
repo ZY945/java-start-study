@@ -1,4 +1,4 @@
-package study.stu;
+package study.studydemo.stu;
 
 /**
  * @author 伍六七

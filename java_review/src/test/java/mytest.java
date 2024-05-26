@@ -1,5 +1,5 @@
 import org.junit.Test;
-import study.ATM.User;
+import study.studydemo.ATM.User;
 
 import java.lang.reflect.Field;
 import java.lang.reflect.Method;
@@ -159,7 +159,7 @@ public class mytest {
         System.out.println(userClass1);
 
         //3. 类的完全限定名
-        Class<?> aClass = Class.forName("study.ATM.User");
+        Class<?> aClass = Class.forName("study.studydemo.ATM.User");
         System.out.println(aClass);
     }
 }
